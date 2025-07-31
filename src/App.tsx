@@ -1,6 +1,6 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Login from "./LoginPage/LoginPage"; // This imports the Login component
-import { RegisterPage } from "./RegisterPage/RegisterPage"; 
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./LoginPage/LoginPage";
+import { RegisterPage } from "./RegisterPage/RegisterPage";
 import { Dashboard } from "./dashboard/dashboard";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { Toaster } from "react-hot-toast";
@@ -21,7 +21,6 @@ function App() {
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-
         <Toaster position="top-center" />
       </div>
     </BrowserRouter>
